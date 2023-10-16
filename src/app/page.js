@@ -2,7 +2,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import { Button, Col, Row, Table } from 'react-bootstrap';
 import { format } from 'date-fns';
 
 export default function Home() {
