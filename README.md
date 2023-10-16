@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Github Frontend App
 
-## Getting Started
+### Configuración inicial - Comandos a ejecutar
 
-First, run the development server:
+Clonar el repositorio para empezar a utilizar la aplicación:
+
+```
+git clone https://github.com/accel33/github-frontend
+```
+
+Proceder a entrar a la carpeta y ejecutar comando para instalar los paquetes de npm:
+
+```
+cd github-frontend && npm install
+```
+
+Hay que tener instalado [Nodejs](https://nodejs.org/en) de manera global.
+
+Comando para ejecutar en local :
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abrir [http://localhost:3000](http://localhost:3000) con el navegador para ver el resultado.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Observaciones para el entrevistador
 
-## Learn More
+La aplicacion deberia utilizar la API del servidor de ya desplegado en AWS con este link: https://grhrdrb9v0.execute-api.us-east-1.amazonaws.com/api/commits
 
-To learn more about Next.js, take a look at the following resources:
+Se ha logrado comprobar su correcto funcionamiento para obtener los commits de la API Github, pero no se ha podido correr dentro del frontend.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Se ha recurrido a obtener directamente la data de la API de Github desde el frontend. El link para el repositorio de backend es el siguiente: https://github.com/accel33/github-backend
