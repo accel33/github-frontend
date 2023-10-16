@@ -62,7 +62,7 @@ export default function Home() {
     console.log(parsedData);
     if (!parsedData.message)
       return (
-        <div className="container">
+        <div className="mr-auto ml-auto">
           <Head>
             <title>Github Commits</title>
             <meta name="description" content="fulltimeforce" />
@@ -72,7 +72,7 @@ export default function Home() {
             />
             <link rel="icon" href="/favicon.ico" />
           </Head>
-          <div className="flex p-4 block ps-20">
+          <div className="flex p-4 block">
             <Image
               className="relative mr-auto ml-auto"
               src="/fulltimeforce.svg"
@@ -82,17 +82,17 @@ export default function Home() {
               priority
             />
           </div>
-          <main className="ps-20 flex-col justify-between items-center h-screen">
-            <p>
-              <Button
-                className="bg-blue-500 text-white p-2"
+          <main className=" h-screen flex flex-col items-center ">
+            <div className="">
+              <button
+                className="bg-blue-500 text-white p-2 rounded-lg my-10"
                 onClick={handleClick}
               >
                 REFRESH
-              </Button>
-            </p>
+              </button>
+            </div>
 
-            <table>
+            <table className="mr-auto ml-auto">
               <thead>
                 <tr>
                   <th>Hash</th>
