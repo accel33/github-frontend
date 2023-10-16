@@ -13,11 +13,18 @@ export default function Home() {
     setLoading(true);
     // esta deberia ser la url: (funciona pero no aqui)
     // fetch('https://grhrdrb9v0.execute-api.us-east-1.amazonaws.com/api/commits')
+    let url1 = 'https://api.github.com/repos/accel33/github-backend/commits';
+    let url2 = 'https://api.github.com/repos/accel33/github-frontend/commits';
     Promise.all([
-      fetch('https://api.github.com/repos/accel33/github-backend/commits'),
-      fetch('https://api.github.com/repos/accel33/github-frontend/commits'),
+      fetch(url1).then((value) => value.json()),
+      fetch(url2).then((value) => value.json()),
     ])
-      .then((res) => res.json())
+      .then((value) => {
+        console.log(value[0]);
+        console.log(value[1]);
+
+        return [...value[0], ...value[1]];
+      })
       .then((data) => {
         console.log('working');
         setData(data);
