@@ -2,6 +2,8 @@
 
 Link de la app: https://github-frontend.netlify.app/
 
+![My Image](public/pagina.png)
+
 ### Configuración inicial - Comandos a ejecutar
 
 Clonar el repositorio para empezar a utilizar la aplicación:
